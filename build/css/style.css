@@ -1,0 +1,317 @@
+/* Ajustes generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #0d203b;
+    color: #FFFFFF;
+    line-height: 1.6;
+    box-sizing: border-box; /* Asegura que padding y bordes no afecten el tamaño total */
+}
+
+/* Header */
+header.header {
+    height: 100vh; /* Mantiene la altura completa */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-bottom: 5px solid #FFBB36;
+}
+
+/* Video del encabezado */
+.video-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;/* Ajustes generales */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: #0d203b;
+        color: #FFFFFF;
+        line-height: 1.6;
+        box-sizing: border-box;
+    }
+    
+    /* Header */
+    header.header {
+        height: 60vh; /* Reduce la altura del encabezado */
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        justify-content: center; /* Centra el contenido verticalmente */
+        align-items: center; /* Centra horizontalmente */
+        border-bottom: 5px solid #FFBB36;
+    }
+    
+    /* Video del encabezado */
+    .video-fondo {
+        position: absolute;
+        top: 50%; /* Centra verticalmente */
+        left: 50%; /* Centra horizontalmente */
+        transform: translate(-50%, -50%);
+        width: 100%; /* Ocupa todo el ancho */
+        height: 100%; /* Ajusta toda la altura */
+        object-fit: cover; /* Asegura que el video no pierda proporción */
+        z-index: -1;
+    }
+    
+    /* Contenido del encabezado */
+    .contenedor.contenido-header {
+        position: relative;
+        z-index: 1; /* Asegura que el contenido esté encima del video */
+        text-align: center; /* Centra el texto en pantallas pequeñas */
+        width: 90%;
+        max-width: 1200px;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 20px 10px; /* Reduce el espacio interno */
+        text-align: center;
+        background-color: #FFBB36;
+        color: #000000;
+        line-height: 1.4;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centra horizontalmente */
+        justify-content: center; /* Centra verticalmente */
+        max-width: 1200px;
+        margin: 0 auto;
+        border-top: 5px solid #FFFFFF; /* Línea de separación en el footer */
+    }
+    
+    /* Video del footer */
+    footer .video-footer {
+        width: 80%; /* Ajusta el tamaño del video en el footer */
+        max-width: 400px; /* Limita el ancho máximo */
+        aspect-ratio: 16/9; /* Mantiene la proporción */
+        object-fit: cover;
+        margin: 10px auto; /* Centra el video */
+        border-radius: 5px; /* Bordes redondeados para mejor presentación */
+    }
+    
+    /* Navegación */
+    nav.navegacion {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap; /* Permite ajustar en pantallas pequeñas */
+    }
+    
+    nav.navegacion a {
+        color: #FFFFFF;
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 8px 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        background-color: #3533cd;
+    }
+    
+    /* Hover de navegación */
+    nav.navegacion a:hover {
+        background-color: #FFBB36;
+        color: #0d203b;
+    }
+    
+    /* Botones en general */
+    button, a {
+        font-size: 14px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    /* Media Queries */
+    @media (max-width: 768px) {
+        header.header {
+            height: 50vh; /* Reduce más el encabezado en pantallas pequeñas */
+        }
+    
+        .video-fondo {
+            width: 100%;
+            height: 100%;
+        }
+    
+        footer .video-footer {
+            width: 90%; /* Ajusta el tamaño del video en el footer */
+        }
+    
+        nav.navegacion {
+            flex-direction: column; /* Acomoda los enlaces en columna */
+            gap: 5px;
+        }
+    }
+    
+    min-height: 100%;
+    object-fit: contain;
+    z-index: -1;
+}
+
+/* Contenedor del contenido en el header */
+.contenedor.contenido-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 20px;
+}
+
+/* Encabezado principal */
+h1 {
+    font-size: 24px;
+    margin: 0;
+    text-align: left;
+}
+
+/* Navegación */
+nav.navegacion {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+nav.navegacion a {
+    color: #FFFFFF !important;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+/* Hover de navegación */
+nav.navegacion a:hover {
+    color: #FFFFFF !important;
+    background-color: #FFBB36 !important;
+}
+
+/* División clara entre el header y el body */
+header.header::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: #FFBB36;
+}
+
+/* Anuncios */
+.contenedor-anuncios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta para pantallas pequeñas */
+    gap: 20px;
+}
+
+.contenedor-anuncios img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover; /* Asegura que las imágenes mantengan proporción */
+}
+
+/* Textos de las tarjetas */
+.contenido-anuncio h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.contenido-anuncio p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: justify;
+    word-wrap: break-word; /* Corta líneas largas para que no desborden */
+}
+
+.contenido-anuncio .precio {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Botones "Ver propiedad" */
+.contenido-anuncio a {
+    font-size: 14px;
+    padding: 8px 10px;
+    text-align: center;
+    display: block;
+    overflow: hidden;
+    white-space: normal; /* Permite que el texto ocupe varias líneas */
+    text-overflow: ellipsis;
+}
+
+/* Footer */
+footer {
+    font-size: 0.8rem;
+    padding: 8px 10px;
+    text-align: center;
+    background-color: #FFBB36;
+    color: #000000;
+    line-height: 1.4;
+}
+
+/* Botones en general */
+button, a {
+    font-size: 14px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilo para secciones de texto */
+.seccion.contenedor {
+    max-width: 1200px; /* Limita el ancho máximo de las secciones */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    padding: 0 20px; /* Espaciado lateral para evitar que el texto se corte */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 18px;
+    }
+
+    nav.navegacion {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav.navegacion a {
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+
+    .contenedor.contenido-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedor-anuncios {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Más compacto en pantallas pequeñas */
+    }
+
+    .contenido-anuncio h3 {
+        font-size: 16px;
+    }
+
+    .contenido-anuncio p {
+        font-size: 12px;
+    }
+
+    footer {
+        font-size: 0.7rem;
+        padding: 5px 8px;
+    }
+
+    .seccion.contenedor {
+        padding: 0 15px; /* Reduce el padding en pantallas pequeñas */
+    }
+}
