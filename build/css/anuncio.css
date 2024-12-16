@@ -1,0 +1,212 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    text-align: justify; /* Justificar todo el texto por defecto */
+    background-color: #FFBB36;
+}
+.header {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 0; /* Incrementa el padding para ampliar el área visible del header */
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 60vh; /* Aumenta la altura total del header */
+}
+
+.video-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 2rem); /* Aumenta ligeramente la altura con rem */
+    object-fit: cover;
+    z-index: -1;
+    transform: scale(1.05); /* Ajusta la escala para cubrir bordes sobrantes */
+    margin-left: -1rem; /* Centra el video con un ajuste controlado */
+    margin-right: -1rem; /* Mantén proporciones en dispositivos grandes */
+}
+
+
+* Contenedor del contenido en el header */
+.contenedor.contenido-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 20px;
+}
+
+/* Encabezado principal */
+h1 {
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+}
+
+/* Navegación */
+nav.navegacion {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+nav.navegacion a {
+    color: #FFFFFF !important;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+/* Hover de navegación */
+nav.navegacion a:hover {
+    color: #FFFFFF !important;
+    background-color: #FFBB36 !important;
+}
+
+/* División clara entre el header y el body */
+header.header::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: #FFBB36;
+}
+
+.seccion {
+    padding: 20px;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contact-btn,
+.boton-azul-claro {
+    display: inline-block; /* Permitir centrado */
+    margin: 20px auto; /* Centrar el botón */
+    background-color: #87CEFA; /* Azul claro */
+    color: white;
+    padding: 8px 15px; /* Reducir tamaño del botón */
+    border: none;
+    border-radius: 5px;
+    font-size: 14px; /* Reducir tamaño del texto */
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover,
+.boton-azul-claro:hover {
+    background-color: #4682B4; /* Azul oscuro */
+}
+
+.contenedor-anuncios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.anuncio {
+    flex: 1 1 calc(33% - 20px);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.anuncio picture img,
+.imagen-propiedad {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.contenido-anuncio {
+    padding: 15px;
+    background-color: transparent;
+    color: #fff;
+}
+
+.contenido-anuncio h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center; /* Centrado */
+}
+
+.contenido-anuncio p {
+    margin-bottom: 10px;
+    text-align: justify; /* Justificar texto */
+}
+
+.contenido-anuncio .precio {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center; /* Centrar precio */
+    margin-bottom: 10px;
+}
+
+ul.iconos-caracteristicas {
+    display: flex;
+    justify-content: center; /* Centrar íconos */
+    gap: 20px; /* Espacio entre íconos */
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+ul.iconos-caracteristicas li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Centrar contenido del ícono */
+}
+
+ul.iconos-caracteristicas li img.icono {
+    margin-bottom: 8px; /* Espacio entre el ícono y el texto */
+    width: 40px; /* Ajustar el tamaño de los íconos */
+    height: 40px;
+}
+
+.alinear-derecha a {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.alinear-derecha a:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #051d40;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .navegacion a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .navegacion a:hover {
+    text-decoration: underline;
+}

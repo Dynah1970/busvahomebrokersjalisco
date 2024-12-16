@@ -10,156 +10,47 @@ body {
 }
 
 /* Header */
-header.header {
-    height: 100vh; /* Mantiene la altura completa */
-    overflow: hidden;
+header {
     position: relative;
+    width: 100%;
+    height: 40vh; /* Altura dinámica del header */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    border-bottom: 5px solid #FFBB36;
+    overflow: hidden; /* Oculta partes no visibles del video */
 }
 
-/* Video del encabezado */
-.video-fondo {
+header video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: auto;/* Ajustes generales */
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        background: #0d203b;
-        color: #FFFFFF;
-        line-height: 1.6;
-        box-sizing: border-box;
-    }
-    
-    /* Header */
-    header.header {
-        height: 60vh; /* Reduce la altura del encabezado */
-        overflow: hidden;
-        position: relative;
-        display: flex;
-        justify-content: center; /* Centra el contenido verticalmente */
-        align-items: center; /* Centra horizontalmente */
-        border-bottom: 5px solid #FFBB36;
-    }
-    
-    /* Video del encabezado */
-    .video-fondo {
-        position: absolute;
-        top: 50%; /* Centra verticalmente */
-        left: 50%; /* Centra horizontalmente */
-        transform: translate(-50%, -50%);
-        width: 100%; /* Ocupa todo el ancho */
-        height: 100%; /* Ajusta toda la altura */
-        object-fit: cover; /* Asegura que el video no pierda proporción */
-        z-index: -1;
-    }
-    
-    /* Contenido del encabezado */
-    .contenedor.contenido-header {
-        position: relative;
-        z-index: 1; /* Asegura que el contenido esté encima del video */
-        text-align: center; /* Centra el texto en pantallas pequeñas */
-        width: 90%;
-        max-width: 1200px;
-    }
-    
-    /* Footer */
-    footer {
-        padding: 20px 10px; /* Reduce el espacio interno */
-        text-align: center;
-        background-color: #FFBB36;
-        color: #000000;
-        line-height: 1.4;
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Centra horizontalmente */
-        justify-content: center; /* Centra verticalmente */
-        max-width: 1200px;
-        margin: 0 auto;
-        border-top: 5px solid #FFFFFF; /* Línea de separación en el footer */
-    }
-    
-    /* Video del footer */
-    footer .video-footer {
-        width: 80%; /* Ajusta el tamaño del video en el footer */
-        max-width: 400px; /* Limita el ancho máximo */
-        aspect-ratio: 16/9; /* Mantiene la proporción */
-        object-fit: cover;
-        margin: 10px auto; /* Centra el video */
-        border-radius: 5px; /* Bordes redondeados para mejor presentación */
-    }
-    
-    /* Navegación */
-    nav.navegacion {
-        display: flex;
-        gap: 10px;
-        justify-content: center;
-        flex-wrap: wrap; /* Permite ajustar en pantallas pequeñas */
-    }
-    
-    nav.navegacion a {
-        color: #FFFFFF;
-        font-size: 14px;
-        font-weight: bold;
-        text-decoration: none;
-        padding: 8px 10px;
-        border-radius: 5px;
-        transition: background-color 0.3s ease, color 0.3s ease;
-        background-color: #3533cd;
-    }
-    
-    /* Hover de navegación */
-    nav.navegacion a:hover {
-        background-color: #FFBB36;
-        color: #0d203b;
-    }
-    
-    /* Botones en general */
-    button, a {
-        font-size: 14px;
-        padding: 10px 15px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    
-    /* Media Queries */
-    @media (max-width: 768px) {
-        header.header {
-            height: 50vh; /* Reduce más el encabezado en pantallas pequeñas */
-        }
-    
-        .video-fondo {
-            width: 100%;
-            height: 100%;
-        }
-    
-        footer .video-footer {
-            width: 90%; /* Ajusta el tamaño del video en el footer */
-        }
-    
-        nav.navegacion {
-            flex-direction: column; /* Acomoda los enlaces en columna */
-            gap: 5px;
-        }
-    }
-    
-    min-height: 100%;
-    object-fit: contain;
-    z-index: -1;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video se ajuste sin distorsión */
+    z-index: -1; /* Video detrás del contenido */
 }
 
-/* Contenedor del contenido en el header */
-.contenedor.contenido-header {
+header .navegacion {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 0 20px;
+    justify-content: flex-end; /* Mueve los enlaces al lado derecho */
+    align-items: center;
+    padding: 10px 20px;
+    gap: 15px;
+    width: 100%;
+}
+
+header .navegacion a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header .navegacion a:hover {
+    background-color: #FFBB36;
 }
 
 /* Encabezado principal */
@@ -169,7 +60,7 @@ h1 {
     text-align: left;
 }
 
-/* Navegación */
+/* Navegación general */
 nav.navegacion {
     display: flex;
     gap: 10px;
@@ -177,7 +68,7 @@ nav.navegacion {
 }
 
 nav.navegacion a {
-    color: #FFFFFF !important;
+    color: #FFFFFF;
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
@@ -187,14 +78,12 @@ nav.navegacion a {
     white-space: nowrap;
 }
 
-/* Hover de navegación */
 nav.navegacion a:hover {
-    color: #FFFFFF !important;
-    background-color: #FFBB36 !important;
+    background-color: #FFBB36;
 }
 
 /* División clara entre el header y el body */
-header.header::after {
+header::after {
     content: '';
     display: block;
     width: 100%;
@@ -243,9 +132,9 @@ header.header::after {
     padding: 8px 10px;
     text-align: center;
     display: block;
-    overflow: hidden;
     white-space: normal; /* Permite que el texto ocupe varias líneas */
     text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 /* Footer */
@@ -273,29 +162,62 @@ button, a {
     padding: 0 20px; /* Espaciado lateral para evitar que el texto se corte */
 }
 
-/* Media Queries */
+/* Media Queries: Ajustes responsivos */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 18px;
-    }
-
-    nav.navegacion {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    nav.navegacion a {
-        font-size: 14px;
-        padding: 6px 8px;
-    }
-
-    .contenedor.contenido-header {
-        flex-direction: column;
-        align-items: center;
-    }
-
+    /* Diseño en columna para anuncios */
     .contenedor-anuncios {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Más compacto en pantallas pequeñas */
+        display: flex;
+        flex-direction: column; /* Una sola columna */
+        gap: 20px;
+    }
+
+    .anuncio {
+        flex: 1 1 100%; /* Cada anuncio ocupa el ancho completo */
+    }
+
+    .anuncio picture {
+        width: 100%; /* Imagen ocupa todo el ancho */
+    }
+
+    .anuncio .contenido-anuncio {
+        text-align: center;
+    }
+
+    /* Video con texto debajo */
+    .video.seccion.contenedor {
+        display: flex;
+        flex-direction: column; /* Video arriba, texto abajo */
+        gap: 20px;
+    }
+
+    .video iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9; /* Mantiene proporción */
+    }
+
+    /* Imagen y texto en formato columna */
+    .seccion.contenedor {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .seccion.contenedor picture {
+        width: 100%; /* Imagen ocupa todo el ancho */
+    }
+
+    .seccion.contenedor div {
+        text-align: center;
+    }
+
+    header {
+        height: 30vh; /* Reduce el tamaño del header */
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor-anuncios {
+        gap: 15px; /* Reduce espacio entre elementos */
     }
 
     .contenido-anuncio h3 {
@@ -303,15 +225,10 @@ button, a {
     }
 
     .contenido-anuncio p {
+        font-size: 14px;
+    }
+
+    .contenido-anuncio a {
         font-size: 12px;
-    }
-
-    footer {
-        font-size: 0.7rem;
-        padding: 5px 8px;
-    }
-
-    .seccion.contenedor {
-        padding: 0 15px; /* Reduce el padding en pantallas pequeñas */
     }
 }
