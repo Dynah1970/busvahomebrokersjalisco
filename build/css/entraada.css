@@ -1,0 +1,221 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0d203b;
+    color: #FFFFFF;
+    line-height: 1.6;
+    overflow-x: hidden; /* Previene desplazamientos horizontales */
+}
+
+/* Header */
+header {
+    position: relative;
+    width: 100%;
+    height: 40vh; /* Altura dinámica del header */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden; /* Oculta partes no visibles del video */
+}
+
+header video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video se ajuste sin distorsión */
+    z-index: -1; /* Video detrás del contenido */
+}
+
+header .navegacion {
+    display: flex;
+    justify-content: flex-end; /* Mueve los enlaces al lado derecho */
+    align-items: center;
+    padding: 10px 20px;
+    gap: 15px;
+    width: 100%;
+}
+
+header .navegacion a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header .navegacion a:hover {
+    background-color: #FFBB36;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+main section {
+    margin-bottom: 40px;
+}
+
+main h1, main h2 {
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+main p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+main img {
+    width: 100%;
+    max-width: 600px; /* Limita el tamaño máximo en pantallas grandes */
+    height: auto;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+/* Botón del Body */
+main a.boton {
+    display: inline-block;
+    background-color: #00BFFF; /* Azul claro */
+    color: #000; /* Texto negro */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+main a.boton:hover {
+    background-color: #007acc; /* Más oscuro al pasar el cursor */
+}
+
+/* Footer Compacto */
+footer {
+    padding: 10px 20px; /* Márgenes internos pequeños */
+    height: auto; /* La altura dependerá del contenido */
+    display: flex;
+    justify-content: flex-end; /* Navegación alineada a la derecha */
+    align-items: center; /* Centra los elementos verticalmente */
+    background-color: #0d203b; /* Fondo del footer */
+}
+
+/* Navegación en el footer */
+footer .navegacion {
+    display: flex;
+    justify-content: flex-end; /* Botones alineados a la derecha */
+    gap: 10px; /* Espaciado entre los enlaces */
+}
+
+footer .navegacion a {
+    color: #FFFFFF; /* Enlaces en blanco */
+    text-decoration: none;
+    font-size: 12px; /* Texto más pequeño */
+    padding: 5px 10px; /* Ajusta el tamaño de los botones */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+footer .navegacion a:hover {
+    background-color: #FFBB36; /* Cambia el fondo al pasar el cursor */
+}
+
+/* Texto en el footer (Opcional) */
+footer p {
+    display: none; /* Oculta el texto adicional para hacer el footer más compacto */
+    font-size: 12px; /* Texto más pequeño si se activa */
+    color: #FFFFFF;
+    text-align: center;
+    margin: 0;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Tablets */
+@media (max-width: 768px) {
+    header {
+        height: 30vh; /* Reduce el tamaño del header */
+    }
+
+    header .navegacion {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+    }
+
+    main h1, main h2 {
+        font-size: 1.8rem;
+    }
+
+    main p {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        padding: 10px; /* Reduce los márgenes internos en tablets */
+    }
+
+    footer .navegacion {
+        gap: 8px; /* Menor espaciado entre los botones */
+    }
+
+    footer .navegacion a {
+        font-size: 11px; /* Texto más pequeño */
+    }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+    header {
+        height: 25vh; /* Header aún más pequeño */
+    }
+
+    header .navegacion {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+        padding-right: 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    main h1, main h2 {
+        font-size: 1.5rem;
+    }
+
+    main p {
+        font-size: 0.8rem;
+    }
+
+    main img {
+        max-width: 100%; /* Imagen ocupa el ancho completo en móviles */
+    }
+
+    footer {
+        padding: 10px; /* Márgenes internos más pequeños */
+    }
+
+    footer .navegacion {
+        gap: 5px; /* Menor espaciado entre los botones */
+    }
+
+    footer .navegacion a {
+        font-size: 10px; /* Texto más pequeño */
+    }
+}
