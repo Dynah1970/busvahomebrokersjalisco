@@ -108,20 +108,20 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f8f9fa; /* Fondo claro */
-    color: white; /* Texto oscuro */
+    color: white; /* Texto claro */
     line-height: 1.6;
 }
 
 h1 {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Mantengo el tamaño del título */
     margin-bottom: 20px;
     color: white;
 }
 
 p {
     margin: 0 0 15px;
-    font-size: 1rem;
+    font-size: 1.2rem; /* Aumenta el tamaño del texto */
     text-align: center;
 }
 
@@ -130,7 +130,6 @@ p {
     margin: 0 auto;
     padding: 20px;
 }
-
 .tarjeta {
     display: flex;
     align-items: center;
@@ -149,6 +148,12 @@ p {
     width: 100%;
     height: auto;
     border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza el movimiento y la sombra */
+}
+
+.tarjeta .imagen img:hover {
+    transform: scale(1.1) translateY(-10px); /* Aumenta el tamaño y se mueve hacia arriba */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el mouse */
 }
 
 .tarjeta .contenido {
@@ -158,13 +163,13 @@ p {
 }
 
 .tarjeta h2 {
-    font-size: 1.8rem;
+    font-size: 1.8rem; /* Mantengo el tamaño del título dentro de las tarjetas */
     margin-bottom: 10px;
     color: #212529; /* Título oscuro */
 }
 
 .tarjeta p {
-    font-size: 1rem;
+    font-size: 1.3rem; /* Aumenta el tamaño del texto dentro de las tarjetas */
     color: #6c757d; /* Texto secundario */
     margin-bottom: 15px;
 }
@@ -177,7 +182,8 @@ p {
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.2rem; /* Aumenta el tamaño del botón */
+    margin-left: auto; /* Mueve el botón al lado derecho */
     transition: background-color 0.3s ease;
 }
 
@@ -199,7 +205,12 @@ p {
     .tarjeta .imagen {
         margin-bottom: 20px;
     }
+
+    .tarjeta a {
+        margin-left: 0; /* Centra el botón en pantallas pequeñas */
+    }
 }
+
 
 /* Menú Móvil */
 .mobile-menu {
@@ -410,3 +421,31 @@ footer .navegacion a:hover {
     }
 }
 
+.navegacion-float {
+    position: fixed;
+    bottom: 20px; /* Ajusta según tu diseño */
+    padding: 10px;
+    background-color: #007bff; /* Fondo azul */
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.navegacion-float img {
+    width: 24px;
+    height: 24px;
+}
+
+.atras-float {
+   left: 80px; /* Posición a la izquierda del botón principal */
+}
+
+.adelante-float {
+   left: 20px; /* Posición a la derecha */
+}
+
+.navegacion-float:hover {
+    background-color: #0056b3; /* Azul más oscuro en hover */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+}

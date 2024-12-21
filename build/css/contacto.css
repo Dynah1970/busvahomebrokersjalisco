@@ -466,3 +466,59 @@ footer .navegacion a:hover {
     }
 }
 
+.navegacion-float {
+    position: fixed;
+    bottom: 20px; /* Ajusta según tu diseño */
+    padding: 10px;
+    background-color: #007bff; /* Fondo azul */
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.navegacion-float img {
+    width: 24px;
+    height: 24px;
+}
+
+.atras-float {
+   left: 80px; /* Posición a la izquierda del botón principal */
+}
+
+.adelante-float {
+   left: 20px; /* Posición a la derecha */
+}
+
+.navegacion-float:hover {
+    background-color: #0056b3; /* Azul más oscuro en hover */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+}
+.navegacion-float {
+    position: fixed;
+    bottom: 20px; /* Ajusta según tu diseño */
+    padding: 10px;
+    background-color: #007bff; /* Fondo azul */
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.navegacion-float img {
+    width: 24px;
+    height: 24px;
+}
+
+.atras-float {
+   left: 80px; /* Posición a la izquierda del botón principal */
+}
+
+.adelante-float {
+   left: 20px; /* Posición a la derecha */
+}
+
+.navegacion-float:hover {
+    background-color: #0056b3; /* Azul más oscuro en hover */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+}

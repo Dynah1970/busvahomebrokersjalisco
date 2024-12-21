@@ -434,3 +434,113 @@ footer .navegacion a:hover {
     }
 }
 
+.navegacion-float {
+    position: fixed;
+    bottom: 20px; /* Ajusta según tu diseño */
+    padding: 10px;
+    background-color: #007bff; /* Fondo azul */
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.navegacion-float img {
+    width: 24px;
+    height: 24px;
+}
+
+.atras-float {
+   left: 80px; /* Posición a la izquierda del botón principal */
+}
+
+.adelante-float {
+   left: 20px; /* Posición a la derecha */
+}
+
+.navegacion-float:hover {
+    background-color: #0056b3; /* Azul más oscuro en hover */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+}
+/* Áreas clicables dentro del video */
+.video-link {
+    position: absolute;
+    text-decoration: none;
+}
+
+.area1 {
+    top: 70%;
+    left: 10%;
+    width: 20%;
+    height: 10%;
+}
+
+.area2 {
+    top: 70%;
+    left: 40%;
+    width: 20%;
+    height: 10%;
+}
+
+.area3 {
+    top: 70%;
+    left: 70%;
+    width: 20%;
+    height: 10%;
+}
+
+.correo {
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20%;
+    height: 10%;
+}
+
+/* Enlace fuera del video */
+.correo-enlace {
+    display: block;
+    margin: 15px auto;
+    color: #FFFFFF;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.1rem;
+    max-width: 90%; /* Ajusta el ancho máximo */
+    word-wrap: break-word; /* Permite que el texto se ajuste */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .area1, .area2, .area3, .correo {
+        top: 75%; /* Ajusta las posiciones verticales */
+        height: 15%; /* Aumenta la altura para facilitar clics en pantallas pequeñas */
+    }
+
+    .area1 {
+        left: 5%; /* Ajusta las posiciones horizontales */
+        width: 30%;
+    }
+
+    .area2 {
+        left: 35%;
+        width: 30%;
+    }
+
+    .area3 {
+        left: 65%;
+        width: 30%;
+    }
+
+    .correo {
+        top: 90%;
+        width: 30%;
+    }
+
+    .correo-enlace {
+        font-size: 1rem; /* Reduce el tamaño del texto */
+        padding: 8px 15px; /* Reduce el padding */
+    }
+}

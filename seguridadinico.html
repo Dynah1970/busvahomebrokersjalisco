@@ -49,11 +49,11 @@
     <div class="nav-container">
         <nav class="desktop-nav">
             <a href="index.html">Inicio</a>
+            <a href="seguridadinico.html">Seguridad</a>
+            <a href="entrada1.html">Profeco</a>
+            <a href="entrada3.html">Testimonios</a>
             <a href="anuncios.html">Anuncios</a>
             <a href="contacto.html">Contacto</a>
-            <a href="entrada3.html">Testimonios</a>
-            <a href="entrada1.html">Profeco</a>
-            <a href="seguridadinico.html">Seguridad</a>
         </nav>
     </div>
     
@@ -62,11 +62,11 @@
         <div id="close-icon" class="close-icon">&times;</div>
         <nav class="mobile-nav">
             <a href="index.html">Inicio</a>
+            <a href="seguridadinico.html">Seguridad</a>
+            <a href="entrada1.html">Profeco</a>
+            <a href="entrada3.html">Testimonios</a>
             <a href="anuncios.html">Anuncios</a>
             <a href="contacto.html">Contacto</a>
-            <a href="entrada3.html">Testimonios</a>
-            <a href="entrada1.html">Profeco</a>
-            <a href="seguridadinico.html">Seguridad</a>
         </nav>
     </div>
 </header>
@@ -136,20 +136,22 @@
     <!-- Áreas clicables invisibles -->
     <a href="https://maps.app.goo.gl/WLS52Rn54Q3VUW7M9" 
        target="_blank" 
-       style="position: absolute; top: 70%; left: 10%; width: 20%; height: 10%; text-decoration: none;"></a>
+       class="video-link area1"></a>
     <a href="https://maps.app.goo.gl/PdmmiGPeMKFTp72UA" 
        target="_blank" 
-       style="position: absolute; top: 70%; left: 40%; width: 20%; height: 10%; text-decoration: none;"></a>
+       class="video-link area2"></a>
     <a href="https://maps.app.goo.gl/9dY2NnFZk1fbxWEv5" 
        target="_blank" 
-       style="position: absolute; top: 70%; left: 70%; width: 20%; height: 10%; text-decoration: none;"></a>
+       class="video-link area3"></a>
     <a href="mailto:juridico019recuperacion@gmail.com" 
-       style="position: absolute; top: 85%; left: 50%; transform: translateX(-50%); width: 20%; height: 10%; text-decoration: none;"></a>
-    <a href="mailto:juridico019recuperacion@gmail.com" 
-       style="display: block; margin: 15px auto 0; color: #FFFFFF; text-decoration: none; background: rgba(0, 0, 0, 0.7); padding: 10px 20px; border-radius: 5px; text-align: center; font-size: 1.1rem;">
-       ✉️ juridico019recuperacion@gmail.com
-    </a> 
+       class="video-link correo"></a>
 </div>
+
+<!-- Enlace para correo fuera del video -->
+<a href="mailto:juridico019recuperacion@gmail.com" 
+   class="correo-enlace">
+   ✉️ juridico019recuperacion@gmail.com
+</a>
 
 
 
@@ -171,17 +173,27 @@
 <a href="tel:+5233123456789" class="llamar-float" title="Llamar por teléfono">
 <img src="https://cdn-icons-png.flaticon.com/512/483/483947.png" alt="Llamar" />
 </a>
+<!-- Botón para ir hacia atrás -->
+<a onclick="history.back()" class="navegacion-float atras-float" title="Ir a la página anterior">
+    <img src="https://cdn-icons-png.flaticon.com/512/271/271220.png" alt="Atrás" />
+</a>
+
+<!-- Botón para ir hacia adelante -->
+<a onclick="history.forward()" class="navegacion-float adelante-float" title="Ir a la siguiente página">
+    <img src="https://cdn-icons-png.flaticon.com/512/271/271228.png" alt="Adelante" />
+</a>
 
 <!-- Footer -->
 <footer class="footer seccion">
     <div class="contenedor contenedor-footer">
         <nav class="navegacion">
             <a href="index.html" style="color: #FFFFFF; text-decoration: none; font-size: 15px; padding: 5px 15px; border-radius: 15px;">Inicio</a>
-            <a href="anuncios.html" style="color: #FFFFFF; text-decoration: none; font-size: 15px; padding: 5px 15px; border-radius: 15px;">Anuncios</a>
-            <a href="contacto.html" style="color: #FFFFFF; text-decoration: none; font-size: 15px; padding: 5px 15px; border-radius: 15px;">Contacto</a>
-            <a href="entrada3.html" style="color: #FFFFFF; text-decoration: none; font-size: 15px; padding: 5px 15px; border-radius: 15px;">Testimonios</a>
-            <a href="entrada1.html" style="color: #FFFFFF; text-decoration: none; font-size: 15px; padding: 5px 15px; border-radius: 15px;">Profeco</a>
-            <a href="seguridadinico.html" style="color: #FFFFFF; text-decoration: none; font-size: 15px; padding: 5px 15px; border-radius: 15px;">Seguridad</a>
+<a href="seguridadinico.html" style="color: #FFFFFF; text-decoration: none; font-size: 15px; padding: 5px 15px; border-radius: 15px;">Seguridad</a>
+<a href="entrada1.html" style="color: #FFFFFF; text-decoration: none; font-size: 15px; padding: 5px 15px; border-radius: 15px;">Profeco</a>
+<a href="entrada3.html" style="color: #FFFFFF; text-decoration: none; font-size: 15px; padding: 5px 15px; border-radius: 15px;">Testimonios</a>
+<a href="anuncios.html" style="color: #FFFFFF; text-decoration: none; font-size: 15px; padding: 5px 15px; border-radius: 15px;">Anuncios</a>
+<a href="contacto.html" style="color: #FFFFFF; text-decoration: none; font-size: 15px; padding: 5px 15px; border-radius: 15px;">Contacto</a>
+
         </nav>
     </div>
 </footer>
