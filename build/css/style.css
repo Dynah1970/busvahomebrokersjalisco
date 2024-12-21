@@ -1,23 +1,69 @@
+
 /* Ajustes generales */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: #0d203b;
+    font-size: 28px; /* Tamaño uniforme para todo el texto */
+    background: #0d203b url('../img/fondoazulamarillo.svg') no-repeat center center fixed;
+    background-size: cover;
     color: #FFFFFF;
-    line-height: 1.6;
-    box-sizing: border-box; /* Asegura que padding y bordes no afecten el tamaño total */
+}
+
+* {
+    font-size: inherit; /* Fuerza que todos los elementos hereden el tamaño del body */
+}
+
+
+/* Contenedor general */
+.seccion.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Contenedor del nav en la parte inferior derecha */
+.nav-container {
+    position: absolute;
+    bottom: 10px; /* Ubicación en la parte inferior */
+    right: 10px; /* Alineación a la derecha */
+    z-index: 10; /* Asegura que esté encima del contenido */
+    padding: 15px; /* Espaciado interno */
+    display: flex;
+    justify-content: center; /* Centra el contenido */
+}
+
+/* Estilo del nav */
+.nav-container .desktop-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Espaciado entre enlaces */
+}
+
+/* Estilo de los enlaces */
+.nav-container .desktop-nav a {
+    text-decoration: none; /* Sin subrayado */
+    color: #FFFFFF; /* Texto blanco */
+    font-size: 17px; /* Tamaño de letra */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 8px; /* Esquinas redondeadas */
+    background: transparent; /* Fondo transparente */
+    border: none; /* Sin bordes */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Transición suave */
+}
+
+/* Hover sobre los enlaces */
+.nav-container .desktop-nav a:hover {
+    background-color: rgba(255, 187, 54, 0.3); /* Fondo naranja translúcido al pasar el cursor */
+    color: #FFFFFF; /* Mantiene el texto blanco */
 }
 
 /* Header */
 header {
     position: relative;
     width: 100%;
-    height: 40vh; /* Altura dinámica del header */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    overflow: hidden; /* Oculta partes no visibles del video */
+    height: 40vh;
+    overflow: hidden;
 }
 
 header video {
@@ -26,75 +72,57 @@ header video {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegura que el video se ajuste sin distorsión */
-    z-index: -1; /* Video detrás del contenido */
+    object-fit: cover;
+    z-index: -1;
 }
 
-header .navegacion {
+.header-content {
+    position: relative;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 20vh;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+
+
+/* Navegación */
+.navegacion {
     display: flex;
-    justify-content: flex-end; /* Mueve los enlaces al lado derecho */
-    align-items: center;
-    padding: 10px 20px;
-    gap: 15px;
-    width: 100%;
+    justify-content: center;
+    gap: 20px;
 }
 
-header .navegacion a {
+.navegacion a {
     color: #FFFFFF;
     text-decoration: none;
-    padding: 8px 12px;
-    font-size: 14px;
+    padding: 10px 20px;
+    font-size: 16px;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-header .navegacion a:hover {
+.navegacion a:hover {
     background-color: #FFBB36;
 }
 
-/* Encabezado principal */
-h1 {
-    font-size: 24px;
-    margin: 0;
-    text-align: left;
+/* Efecto hover específico para la clase 'have-seguridad' */
+.have-seguridad img {
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Navegación general */
-nav.navegacion {
-    display: flex;
-    gap: 10px;
-    justify-content: flex-end;
-}
-
-nav.navegacion a {
-    color: #FFFFFF;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 8px 10px;
-    border-radius: 5px;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    white-space: nowrap;
-}
-
-nav.navegacion a:hover {
-    background-color: #FFBB36;
-}
-
-/* División clara entre el header y el body */
-header::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 5px;
-    background: #FFBB36;
+.have-seguridad img:hover {
+    transform: scale(1.1); /* Escala la imagen un 10% más grande */
 }
 
 /* Anuncios */
 .contenedor-anuncios {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta para pantallas pequeñas */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
@@ -102,22 +130,19 @@ header::after {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
-    object-fit: cover; /* Asegura que las imágenes mantengan proporción */
+    object-fit: cover;
 }
 
-/* Textos de las tarjetas */
 .contenido-anuncio h3 {
     font-size: 18px;
     margin-bottom: 10px;
     text-align: center;
-    color: #FFFFFF;
 }
 
 .contenido-anuncio p {
     font-size: 14px;
     margin-bottom: 10px;
     text-align: justify;
-    word-wrap: break-word; /* Corta líneas largas para que no desborden */
 }
 
 .contenido-anuncio .precio {
@@ -126,109 +151,291 @@ header::after {
     text-align: center;
 }
 
-/* Botones "Ver propiedad" */
-.contenido-anuncio a {
-    font-size: 14px;
-    padding: 8px 10px;
+/* Responsividad */
+@media (max-width: 768px) {
+    .contenedor-anuncios {
+        display: flex;
+        flex-direction: column; /* Tarjetas en fila */
+        gap: 20px;
+    }
+
+    .contenido-anuncio h3, .contenido-anuncio p, .contenido-anuncio .precio {
+        text-align: left; /* Ajuste opcional */
+    }
+}                       
+/* Tarjetas con movimiento */
+.razones-invertir {
     text-align: center;
-    display: block;
-    white-space: normal; /* Permite que el texto ocupe varias líneas */
-    text-overflow: ellipsis;
+}
+.contenedor-razones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajuste responsivo */
+    gap: 20px; /* Espaciado entre tarjetas */
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* Estilo para cada tarjeta */
+.tarjeta {
+    background: #fff;
+    color: #333;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
     overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px) scale(1.1); /* Efecto de levitación y crecimiento */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+}
+
+.contenido-tarjeta {
+    padding: 15px;
+    color: #333;
+}
+
+.contenido-tarjeta h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #0d203b; /* Azul oscuro */
+}
+
+.contenido-tarjeta p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .contenedor-razones {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+        gap: 15px;
+    }
+
+    .tarjeta {
+        width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+    }
 }
 
 /* Footer */
-footer {
-    font-size: 0.8rem;
-    padding: 8px 10px;
-    text-align: center;
-    background-color: #FFBB36;
-    color: #000000;
-    line-height: 1.4;
+
+
+/* Menú Móvil */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(13, 32, 59, 0.95);
+    z-index: 1000;
+    transition: left 0.3s ease;
 }
 
-/* Botones en general */
-button, a {
-    font-size: 14px;
-    padding: 8px 10px;
-    border-radius: 5px;
+.mobile-menu.active {
+    left: 0;
+}
+
+.mobile-menu .close-icon {
+    font-size: 20px;
+    align-self: flex-end;
     cursor: pointer;
+    padding: 20px;
 }
 
-/* Estilo para secciones de texto */
-.seccion.contenedor {
-    max-width: 1200px; /* Limita el ancho máximo de las secciones */
-    margin: 0 auto; /* Centra el contenido horizontalmente */
-    padding: 0 20px; /* Espaciado lateral para evitar que el texto se corte */
+.mobile-nav a {
+    text-decoration: none;
+    color: white;
+    display: block;
 }
 
-/* Media Queries: Ajustes responsivos */
+/* Responsividad */
 @media (max-width: 768px) {
-    /* Diseño en columna para anuncios */
-    .contenedor-anuncios {
-        display: flex;
-        flex-direction: column; /* Una sola columna */
-        gap: 20px;
+    header .menu-icon {
+        display: block;
     }
 
-    .anuncio {
-        flex: 1 1 100%; /* Cada anuncio ocupa el ancho completo */
+    header .desktop-nav {
+        display: none;
     }
 
-    .anuncio picture {
-        width: 100%; /* Imagen ocupa todo el ancho */
+    .nav-container {
+        display: none;
     }
 
-    .anuncio .contenido-anuncio {
+    .header-content {
+        align-items: center;
+        padding-left: 0;
         text-align: center;
     }
 
-    /* Video con texto debajo */
-    .video.seccion.contenedor {
-        display: flex;
-        flex-direction: column; /* Video arriba, texto abajo */
-        gap: 20px;
-    }
-
-    .video iframe {
-        width: 100%;
-        aspect-ratio: 16 / 9; /* Mantiene proporción */
-    }
-
-    /* Imagen y texto en formato columna */
-    .seccion.contenedor {
-        display: flex;
+    .navegacion {
         flex-direction: column;
-        gap: 20px;
+        align-items: center;
+        gap: 10px;
     }
 
-    .seccion.contenedor picture {
-        width: 100%; /* Imagen ocupa todo el ancho */
-    }
-
-    .seccion.contenedor div {
+    .navegacion a {
+        width: 80%;
         text-align: center;
     }
+}
+footer {
+    background-color: transparent; /* Fondo completamente transparente */
+    padding: 20px 0; /* Espaciado arriba y abajo del contenido */
+    text-align: center;
+    color: #FFFFFF; /* Texto blanco */
+    position: relative; /* Asegura que se mantenga dentro del flujo de la página */
+}
 
-    header {
-        height: 30vh; /* Reduce el tamaño del header */
-    }
+footer .navegacion {
+    display: flex;
+    justify-content: center; /* Centrar los elementos de navegación */
+    gap: 20px; /* Espaciado entre los elementos */
+    padding: 10px 0;
+}
+
+footer .navegacion a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #FFFFFF; /* Color del texto blanco */
+    font-size: 1rem; /* Tamaño del texto reducido */
+    /* Texto en negrita */
+    background-color: transparent; /* Fondo completamente transparente */
+    border: none; /* Sin bordes */
+    padding: 8px 12px; /* Espaciado interno ajustado para los enlaces */
+    border-radius: 8px; /* Esquinas ligeramente redondeadas */
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+footer .navegacion a:hover {
+    background-color: rgba(255, 187, 54, 0.3); /* Fondo naranja translúcido al pasar el cursor */
+    color: #FFFFFF; /* Mantiene el texto blanco */
 }
 
 @media (max-width: 480px) {
-    .contenedor-anuncios {
-        gap: 15px; /* Reduce espacio entre elementos */
+    header h1 {
+        font-size: 1.8rem; /* Tamaño del encabezado ajustado */
     }
 
-    .contenido-anuncio h3 {
-        font-size: 16px;
+    footer .navegacion {
+        flex-direction: column; /* Coloca los enlaces en columna en pantallas pequeñas */
+        gap: 10px;
     }
 
-    .contenido-anuncio p {
-        font-size: 14px;
-    }
-
-    .contenido-anuncio a {
-        font-size: 12px;
+    footer .navegacion a {
+        font-size: 0.9rem; /* Reduce el tamaño de letra para pantallas pequeñas */
+        padding: 8px 10px; /* Ajusta el espaciado interno */
     }
 }
+/* Estilo del botón flotante de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px; /* Espaciado desde abajo */
+    right: 160px; /* Ajuste de posición para evitar superposición */
+    z-index: 1001; /* Asegurar que esté sobre otros elementos */
+    width: 60px; /* Tamaño del botón */
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50%; /* Forma circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: float-whatsapp 2s infinite;
+    cursor: pointer;
+}
+
+/* Ícono de WhatsApp */
+.whatsapp-float img {
+    width: 35px;
+    height: 35px;
+}
+
+/* Animación flotante específica de WhatsApp */
+@keyframes float-whatsapp {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Botón flotante del formulario */
+.formulario-float {
+    position: fixed;
+    bottom: 20px;
+    right: 90px; /* Ajuste para evitar superposición */
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    background-color: #007BFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    animation: float-formulario 2s infinite;
+    cursor: pointer;
+}
+
+/* Ícono del formulario */
+.formulario-float img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Animación flotante específica del formulario */
+@keyframes float-formulario {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Botón flotante para llamadas */
+.llamar-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* Ajuste de posición */
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    animation: float-llamar 2s infinite;
+    cursor: pointer;
+}
+
+/* Ícono de llamada */
+.llamar-float img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Animación flotante específica para llamada */
+@keyframes float-llamar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
