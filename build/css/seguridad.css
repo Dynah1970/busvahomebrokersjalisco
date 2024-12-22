@@ -461,6 +461,8 @@ footer .navegacion a:hover {
 .navegacion-float:hover {
     background-color: #0056b3; /* Azul más oscuro en hover */
     transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+
+
 }
 /* Áreas clicables dentro del video */
 .video-link {
@@ -503,7 +505,7 @@ footer .navegacion a:hover {
     margin: 15px auto;
     color: #FFFFFF;
     text-decoration: none;
-    background: rgba(0, 0, 0, 0.7);
+   
     padding: 10px 20px;
     border-radius: 5px;
     text-align: center;
