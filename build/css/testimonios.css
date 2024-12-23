@@ -5,7 +5,7 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     font-size: 18px; /* Tamaño uniforme para todo el texto */
-    background: #0d203b url('../img/fondoazulamarillo.svg') no-repeat center center fixed;
+    background: linear-gradient(to bottom, #ede2d8 85%, #051d40 100%);
     background-size: cover;
     color: #FFFFFF;
 }
@@ -111,7 +111,7 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     font-size: 18px;
-    background: #0d203b url('../img/fondoazulamarillo.svg') no-repeat center center fixed;
+    background: linear-gradient(to bottom, #ede2d8 85%, #051d40 100%);
     background-size: cover;
     color: #FFFFFF;
 }
@@ -146,16 +146,50 @@ h1 {
 .testimonial {
     background-color: white;
     border-radius: 15px;
-    padding: 20px;
+    padding: 15px; /* Reduce el padding interno */
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    min-height: 220px; /* Ajuste de altura mínima para consistencia */
+    min-height: 150px; /* Reduce la altura mínima */
     display: flex;
-    flex-direction: column; /* Asegura una estructura vertical */
-    justify-content: space-between; /* Espaciado interno entre los elementos */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 220px; /* Ajusta el ancho */
+    margin: 0 auto; /* Centra el cuadro */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+/* Contenedor de la imagen circular */
+.imagen {
+    width: 80px; /* Ajusta el tamaño deseado del contenedor */
+    height: 80px; /* Ajusta el tamaño deseado del contenedor */
+    margin: 0 auto 10px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid white;
+    position: relative;
+    transition: transform 0.3s ease-in-out; /* Movimiento suave */
+}
 
+/* Imagen dentro del contenedor */
+.imagen img {
+    width: 100%; /* Asegúrate de que la imagen ocupe todo el ancho del contenedor */
+    height: 100%; /* Asegúrate de que la imagen ocupe todo el alto del contenedor */
+    object-fit: cover; /* Recorta proporcionalmente para llenar el círculo */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Movimiento al pasar el cursor */
+.imagen:hover img {
+    transform: scale(1.2); /* Agranda ligeramente la imagen */
+}
+
+/* Centrar el nombre del que da el testimonio */
+.nombre {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #051d40;
+    margin-bottom: 10px;
+}
 
 /* Estilo para el testimonial final */
 .testimonial-final {
@@ -173,17 +207,7 @@ blockquote {
     color: black;
 }
 
-/* Estilo para el texto dentro de los testimonios */
-.testimonial {
-    background-color: white;
-    border-radius: 15px;
-    padding: 20px;
-    position: relative;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Suaviza las transiciones */
-}
-
+/* Hover en testimonios */
 .testimonial:hover {
     transform: translateY(-10px) scale(1.05); /* Eleva y agranda ligeramente */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Incrementa la sombra */

@@ -108,7 +108,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #0d203b; /* Fondo oscuro */
+    background: linear-gradient(to bottom, #ede2d8 85%, #051d40 100%);
     color: #ffffff; /* Texto blanco */
 }
 
@@ -120,14 +120,14 @@ body {
 }
 
 h1 {
-    font-size: 2.5rem;
-    color: #ffffff;
+    font-size: 1.5rem;
+    color:black;
     margin-bottom: 30px;
 }
 
 .imagen-propiedad {
-    width: 100%;
-    max-width: 600px; /* Limita el tamaño máximo */
+    width: 50%;
+    max-width: 100px; /* Limita el tamaño máximo */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     margin: 0 auto 20px auto; /* Centra la imagen */
@@ -473,7 +473,7 @@ footer .navegacion a:hover {
 .whatsapp-float {
     position: fixed;
     bottom: 20px; /* Espaciado desde abajo */
-    right: 160px; /* Ajuste de posición para evitar superposición */
+    right: 100px; /* Ajuste de posición para evitar superposición */
     z-index: 1001; /* Asegurar que esté sobre otros elementos */
     width: 60px; /* Tamaño del botón */
     height: 60px;
@@ -575,11 +575,12 @@ footer .navegacion a:hover {
     position: fixed;
     bottom: 20px; /* Ajusta según tu diseño */
     padding: 10px;
-    background-color: #007bff; /* Fondo azul */
+    background-color:#ede2d8; /* Fondo azul */
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 9999;
 }
 
 .navegacion-float img {
@@ -596,6 +597,6 @@ footer .navegacion a:hover {
 }
 
 .navegacion-float:hover {
-    background-color: #0056b3; /* Azul más oscuro en hover */
+    background-color:#ede2d8; /* Azul más oscuro en hover */
     transform: scale(1.1); /* Aumenta ligeramente el tamaño */
 }

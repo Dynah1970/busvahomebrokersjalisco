@@ -4,10 +4,10 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    font-size: 28px; /* Tamaño uniforme para todo el texto */
-    background: #0d203b url('../img/fondoazulamarillo.svg') no-repeat center center fixed;
+    font-size: 20px; /* Tamaño uniforme para todo el texto */
+    background: linear-gradient(to bottom, #ede2d8 85%, #051d40 100%);
     background-size: cover;
-    color: #FFFFFF;
+    color: black;
 }
 
 * {
@@ -124,12 +124,12 @@ h1, h2 {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
-    background-color: #243475;
+    background-color:#051d40;
 }
 
 /* Tarjetas de anuncio */
 .anuncio {
-    background-color:  #243475;
+    background-color:  #ede2d8;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -164,7 +164,7 @@ h1, h2 {
 .contenido-anuncio .precio {
     font-size: 20px;
     font-weight: bold;
-    color: white;
+    color:black;
     margin: 15px 0;
 }
 
@@ -188,12 +188,13 @@ h1, h2 {
     width: 30px;
     height: 30px;
     margin-bottom: 5px;
-    filter: invert(1); /* Convierte los colores del SVG a blanco */
+    filter:none; 
+    fill: black;/* Convierte los colores del SVG a blanco */
 }
 
 /* Opcional: Hover para cambiar el color */
 .iconos-caracteristicas img:hover {
-    filter: invert(0.8); /* Cambia a un blanco menos intenso */
+    filter: none; /* Cambia a un blanco menos intenso */
 }
 
 
@@ -353,7 +354,7 @@ footer .navegacion a:hover {
 .whatsapp-float {
     position: fixed;
     bottom: 20px; /* Espaciado desde abajo */
-    right: 160px; /* Ajuste de posición para evitar superposición */
+    right: 100px; /* Ajuste de posición para evitar superposición */
     z-index: 1001; /* Asegurar que esté sobre otros elementos */
     width: 60px; /* Tamaño del botón */
     height: 60px;
@@ -455,11 +456,12 @@ footer .navegacion a:hover {
     position: fixed;
     bottom: 20px; /* Ajusta según tu diseño */
     padding: 10px;
-    background-color: #007bff; /* Fondo azul */
+    background-color:#ede2d8; /* Fondo azul */
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 9999;
 }
 
 .navegacion-float img {
@@ -476,6 +478,6 @@ footer .navegacion a:hover {
 }
 
 .navegacion-float:hover {
-    background-color: #0056b3; /* Azul más oscuro en hover */
+    background-color:#ede2d8; /* Azul más oscuro en hover */
     transform: scale(1.1); /* Aumenta ligeramente el tamaño */
 }

@@ -5,9 +5,9 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     font-size: 18px; /* Tamaño uniforme para todo el texto */
-    background: #0d203b url('../img/fondoazulamarillo.svg') no-repeat center center fixed;
+    background: linear-gradient(to bottom, #ede2d8 85%, #051d40 100%);
     background-size: cover;
-    color: #FFFFFF;
+    color: black;
 }
 
 * {
@@ -106,7 +106,7 @@ h1, h2 {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #0d203b; /* Fondo oscuro */
+    background: linear-gradient(to bottom, #ede2d8 85%, #051d40 100%);
     color: #ffffff; /* Texto blanco por defecto */
     margin: 0;
     padding: 0;
@@ -121,7 +121,7 @@ body {
 
 h1 {
     font-size: 2.5rem; /* Tamaño más grande */
-    color: #ffffff; /* Título blanco */
+    color: black; /* Título blanco */
     margin-bottom: 40px;
     text-align: center;
 }
@@ -336,7 +336,7 @@ footer .navegacion a:hover {
 .whatsapp-float {
     position: fixed;
     bottom: 20px; /* Espaciado desde abajo */
-    right: 160px; /* Ajuste de posición para evitar superposición */
+    right: 100px; /* Ajuste de posición para evitar superposición */
     z-index: 1001; /* Asegurar que esté sobre otros elementos */
     width: 60px; /* Tamaño del botón */
     height: 60px;
@@ -438,11 +438,12 @@ footer .navegacion a:hover {
     position: fixed;
     bottom: 20px; /* Ajusta según tu diseño */
     padding: 10px;
-    background-color: #007bff; /* Fondo azul */
+    background-color: #ede2d8; /* Fondo azul */
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 9999;
 }
 
 .navegacion-float img {
@@ -459,90 +460,6 @@ footer .navegacion a:hover {
 }
 
 .navegacion-float:hover {
-    background-color: #0056b3; /* Azul más oscuro en hover */
+    background-color: #ede2d8; /* Azul más oscuro en hover */
     transform: scale(1.1); /* Aumenta ligeramente el tamaño */
-
-
-}
-/* Áreas clicables dentro del video */
-.video-link {
-    position: absolute;
-    text-decoration: none;
-}
-
-.area1 {
-    top: 70%;
-    left: 10%;
-    width: 20%;
-    height: 10%;
-}
-
-.area2 {
-    top: 70%;
-    left: 40%;
-    width: 20%;
-    height: 10%;
-}
-
-.area3 {
-    top: 70%;
-    left: 70%;
-    width: 20%;
-    height: 10%;
-}
-
-.correo {
-    top: 85%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 20%;
-    height: 10%;
-}
-
-/* Enlace fuera del video */
-.correo-enlace {
-    display: block;
-    margin: 15px auto;
-    color: #FFFFFF;
-    text-decoration: none;
-   
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 1.1rem;
-    max-width: 90%; /* Ajusta el ancho máximo */
-    word-wrap: break-word; /* Permite que el texto se ajuste */
-}
-
-/* Responsividad */
-@media (max-width: 768px) {
-    .area1, .area2, .area3, .correo {
-        top: 75%; /* Ajusta las posiciones verticales */
-        height: 15%; /* Aumenta la altura para facilitar clics en pantallas pequeñas */
-    }
-
-    .area1 {
-        left: 5%; /* Ajusta las posiciones horizontales */
-        width: 30%;
-    }
-
-    .area2 {
-        left: 35%;
-        width: 30%;
-    }
-
-    .area3 {
-        left: 65%;
-        width: 30%;
-    }
-
-    .correo {
-        top: 90%;
-        width: 30%;
-    }
-
-    .correo-enlace {
-        font-size: 1rem; /* Reduce el tamaño del texto */
-        padding: 8px 15px; /* Reduce el padding */
-    }
 }
