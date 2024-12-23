@@ -74,58 +74,43 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-const video = document.getElementById("interactive-video");
-
-video.addEventListener("timeupdate", () => {
-    // Detectar si el video está cerca del final
-    if (video.currentTime >= (video.duration - 1.2)) {
-        freezeAndResumeVideo();
-    }
-});
-
-function freezeAndResumeVideo() {
-    // Pausar el video y mantener el cuadro actual
-    video.pause();
-
-    // Reanudar el video inmediatamente sin dejar la pantalla sin imagen
-    setTimeout(() => {
-        video.style.transition = "opacity 0.5s ease-in-out"; // Transición opcional
-        video.style.opacity = "1"; // Mantener la opacidad
-
-        video.play(); // Reanudar inmediatamente
-
-        // Reproducir el video por 1 segundo y volver a pausar
-        setTimeout(() => {
-            freezeAndResumeVideo(); // Pausar nuevamente después de 1 segundo
-        }, 1000); // Ajusta este tiempo si necesitas más o menos tiempo de reproducción
-    }, 0); // Sin tiempo de espera antes de reanudar
-}
 
 
 
- //header//  
- document.addEventListener("DOMContentLoaded", () => {
+
+document.addEventListener("DOMContentLoaded", () => {
     const videoElement = document.getElementById("header-video");
     const videoContainer = document.getElementById("header-video-container");
 
-    // Verificar si el video puede reproducirse
+    // Si el video no puede reproducirse o no se carga
     videoElement.addEventListener("error", () => {
         reemplazarConSVG();
     });
 
-    videoElement.addEventListener("loadeddata", () => {
-        // Si el video se carga correctamente, no hacer nada.
+    // Si el video tarda demasiado en cargar
+    videoElement.addEventListener("stalled", () => {
+        reemplazarConSVG();
+    });
+
+    // Si el video no inicia automáticamente en algunos dispositivos
+    videoElement.addEventListener("canplaythrough", () => {
+        if (videoElement.readyState < 3) {
+            reemplazarConSVG();
+        }
     });
 
     function reemplazarConSVG() {
-        // Reemplazar el contenido por un SVG
+        // Asegúrate de que el contenedor exista
+        if (!videoContainer) return;
+
+        // Reemplazar el video con un SVG
         videoContainer.innerHTML = `
             <img src="build/img/headersvg.svg" alt="Header Background" class="svg-fondo">
         `;
 
-        // Agregar animación al SVG mediante JavaScript
+        // Animación para el SVG
         const svg = document.querySelector(".svg-fondo");
-        let direction = 1; // Control de dirección de movimiento
+        let direction = 1; // Dirección del movimiento
         let position = 0;
 
         function animarSVG() {
@@ -137,7 +122,14 @@ function freezeAndResumeVideo() {
             requestAnimationFrame(animarSVG);
         }
 
-        animarSVG(); // Iniciar la animación
+        animarSVG(); // Iniciar animación
     }
+
+    // Forzar comprobación en caso de que el video no cargue rápido
+    setTimeout(() => {
+        if (!videoElement.readyState || videoElement.networkState === 3) {
+            reemplazarConSVG();
+        }
+    }, 5000); // Tiempo límite para cargar video
 });
 
