@@ -152,31 +152,32 @@
 <!-- Footer -->
 <footer class="footer" style="position: relative; overflow: hidden;">
     <!-- Imagen o fondo alternativo -->
-    <div class="footer-content" style="position: relative; width: 100%;">
-        <img src="build/img/footerweb.svg" alt="Footer Background" class="footer-image" style="width: 100%; height: auto; display: block;">
-        
-        <!-- Áreas clicables invisibles -->
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; max-width: 1200px; margin: 0 auto;">
-            <!-- Ícono para CDMX -->
+    <div class="footer-content" style="position: relative; width: 100%; aspect-ratio: 16/9; overflow: hidden;">
+        <!-- Video -->
+        <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
+            <source src="footericonov.mp4" type="video/mp4">
+            Tu navegador no soporta videos.
+        </video>
+    
+        <!-- Áreas clicables -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: space-evenly; align-items: flex-end; padding: 20px;">
+            <!-- CDMX -->
             <a href="https://maps.app.goo.gl/WLS52Rn54Q3VUW7M9" 
                target="_blank" 
-               style="position: absolute; bottom: 40%; left: 10%; transform: translate(-50%, 0); text-decoration: none;">
-                <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Ubicación CDMX" style="width: 28px; height: 28px;">
+               style="display: block; width: 100px; height: 100px; position: absolute; top: 60%; left: 10%; transform: translate(-50%, -50%); z-index: 2;">
             </a>
-        
-            <!-- Ícono para Guadalajara -->
+            
+            <!-- Guadalajara -->
             <a href="https://maps.app.goo.gl/PdmmiGPeMKFTp72UA" 
                target="_blank" 
-               style="position: absolute; bottom: 40%; left: 43%; transform: translate(-50%, 0); text-decoration: none;">
-                <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Ubicación Guadalajara" style="width: 28px; height: 28px;">
+               style="display: block; width: 100px; height: 100px; position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%); z-index: 2;">
             </a>
         
-            <!-- Ícono para Zapopan -->
+            <!-- Zapopan -->
             <a href="https://maps.app.goo.gl/9dY2NnFZk1fbxWEv5" 
-               target="_blank" 
-               style="position: absolute; bottom:40%; left: 82%; transform: translate(-50%, 0); text-decoration: none;">
-                <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Ubicación Zapopan" style="width: 28px; height: 28px;">
-            </a>
+            target="_blank" 
+            style="display: block; width: 100px; height: 100px; position: absolute; top: 60%; left: 80%; transform: translate(-50%, -50%); z-index: 2;">
+         </a>
         </div>
     </div>
 
