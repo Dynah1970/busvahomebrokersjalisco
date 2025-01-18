@@ -121,21 +121,28 @@ h1, h2 {
 
 /* Estilo para la imagen con efecto de movimiento */
 .imagen-preguntas {
-    width: 50%; /* Ajusta el tamaño al 50% del contenedor */
+    width: 60%; /* Ajusta el tamaño al 60% del contenedor */
     height: auto; /* Mantén la proporción de la imagen */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transiciones suaves */
 }
 
 /* Efecto al pasar el cursor */
-.imagen-movible:hover {
+.imagen-preguntas:hover {
     transform: translateY(-10px) scale(1.1); /* Mueve hacia arriba y crece */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
 }
 
 /* Efecto al tocar (dispositivos táctiles) */
-.imagen-movible:active {
+.imagen-preguntas:active {
     transform: translateY(-5px) scale(1.05); /* Leve movimiento hacia arriba */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra menos intensa */
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 480px) {
+    .imagen-preguntas {
+        width: 80%; /* Ajusta el tamaño de la imagen al 80% en pantallas pequeñas */
+    }
 }
 /* Anuncios */
 .contenedor-anuncios {
