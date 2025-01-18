@@ -124,16 +124,18 @@ h1, h2 {
     width: 60%; /* Ajusta el tamaño al 60% del contenedor */
     height: auto; /* Mantén la proporción de la imagen */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transiciones suaves */
+    object-fit: cover; /* Asegura que la imagen se ajusta bien sin distorsión */
 }
 
-/* Efecto al pasar el cursor */
+/* Efecto al pasar el cursor (para escritorio) */
 .imagen-preguntas:hover {
     transform: translateY(-10px) scale(1.1); /* Mueve hacia arriba y crece */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
 }
 
-/* Efecto al tocar (dispositivos táctiles) */
-.imagen-preguntas:active {
+/* Efecto al tocar (dispositivos táctiles y móviles) */
+.imagen-preguntas:active,
+.imagen-preguntas.touch-active {
     transform: translateY(-5px) scale(1.05); /* Leve movimiento hacia arriba */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra menos intensa */
 }
@@ -141,9 +143,24 @@ h1, h2 {
 /* Ajustes para dispositivos móviles */
 @media (max-width: 480px) {
     .imagen-preguntas {
-        width: 80%; /* Ajusta el tamaño de la imagen al 80% en pantallas pequeñas */
+        width: 90%; /* Ajusta el tamaño de la imagen al 90% en pantallas pequeñas */
     }
 }
+
+/* Ajustes en pantallas más grandes */
+@media (min-width: 768px) {
+    .imagen-preguntas {
+        width: 60%; /* Ajusta el tamaño al 60% en pantallas medianas */
+    }
+}
+
+/* Ajuste máximo en pantallas grandes */
+@media (min-width: 1024px) {
+    .imagen-preguntas {
+        width: 50%; /* Ajusta el tamaño de la imagen en pantallas grandes */
+    }
+}
+
 /* Anuncios */
 .contenedor-anuncios {
     display: grid;
