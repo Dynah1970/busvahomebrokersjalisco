@@ -26,6 +26,7 @@ body {
     position: absolute;
     bottom: 10px; /* Ubicación en la parte inferior */
     right: 10px; /* Alineación a la derecha */
+    transform: translateY(20px); /* Baja el contenedor 20px más */
     z-index: 10; /* Asegura que esté encima del contenido */
     padding: 15px; /* Espaciado interno */
     display: flex;
@@ -61,7 +62,7 @@ body {
 header {
     position: relative;
     width: 100%;
-    height: 40vh;
+    height: 20vh;
     overflow: hidden;
 }
 
@@ -118,6 +119,24 @@ h1, h2 {
     transform: scale(1.1); /* Escala la imagen un 10% más grande */
 }
 
+/* Estilo para la imagen con efecto de movimiento */
+.imagen-preguntas {
+    width: 50%; /* Ajusta el tamaño al 50% del contenedor */
+    height: auto; /* Mantén la proporción de la imagen */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transiciones suaves */
+}
+
+/* Efecto al pasar el cursor */
+.imagen-preguntas:hover {
+    transform: translateY(-10px) scale(1.1); /* Mueve hacia arriba y crece */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+}
+
+/* Efecto al tocar (dispositivos táctiles) */
+.imagen-mpreguntas:active {
+    transform: translateY(-5px) scale(1.05); /* Leve movimiento hacia arriba */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra menos intensa */
+}
 /* Anuncios */
 .contenedor-anuncios {
     display: grid;
@@ -324,11 +343,13 @@ footer .navegacion a:hover {
     width: 100%;
     aspect-ratio: 16/9;
     overflow: hidden;
+    margin-bottom: -360px; /* Reduce el espacio bajo el video */
 }
 
 .footer-content video {
     width: 100%;
-    height: 100%;
+    height: auto; /* Mantiene la proporción del video */
+    max-height: 50vh; /* Limita la altura del video al 80% de la altura de la ventana */
     object-fit: cover;
 }
 

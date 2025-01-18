@@ -27,6 +27,7 @@ body {
     position: absolute;
     bottom: 10px; /* Ubicación en la parte inferior */
     right: 10px; /* Alineación a la derecha */
+    transform: translateY(20px); /* Baja el contenedor 20px más */
     z-index: 10; /* Asegura que esté encima del contenido */
     padding: 15px; /* Espaciado interno */
     display: flex;
@@ -62,7 +63,7 @@ body {
 header {
     position: relative;
     width: 100%;
-    height: 40vh;
+    height: 20vh;
     overflow: hidden;
 }
 
@@ -316,11 +317,13 @@ footer .navegacion a:hover {
     width: 100%;
     aspect-ratio: 16/9;
     overflow: hidden;
+    margin-bottom: -360px; /* Reduce el espacio bajo el video */
 }
 
 .footer-content video {
     width: 100%;
-    height: 100%;
+    height: auto; /* Mantiene la proporción del video */
+    max-height: 50vh; /* Limita la altura del video al 80% de la altura de la ventana */
     object-fit: cover;
 }
 
