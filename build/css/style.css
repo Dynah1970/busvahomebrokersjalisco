@@ -127,13 +127,13 @@ h1, h2 {
 }
 
 /* Efecto al pasar el cursor */
-.imagen-preguntas:hover {
+.imagen-movible:hover {
     transform: translateY(-10px) scale(1.1); /* Mueve hacia arriba y crece */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
 }
 
 /* Efecto al tocar (dispositivos táctiles) */
-.imagen-mpreguntas:active {
+.imagen-movible:active {
     transform: translateY(-5px) scale(1.05); /* Leve movimiento hacia arriba */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra menos intensa */
 }
@@ -314,7 +314,8 @@ footer {
     text-align: center;
     color: #FFFFFF;
     position: relative;
-}
+    
+   }
 
 footer .navegacion {
     display: flex;
@@ -330,7 +331,7 @@ footer .navegacion a {
     padding: 8px 12px;
     border-radius: 8px;
     transition: color 0.3s ease, background-color 0.3s ease;
-}
+   }
 
 footer .navegacion a:hover {
     background-color: rgba(255, 187, 54, 0.3);
@@ -344,6 +345,7 @@ footer .navegacion a:hover {
     aspect-ratio: 16/9;
     overflow: hidden;
     margin-bottom: -360px; /* Reduce el espacio bajo el video */
+    
 }
 
 .footer-content video {
@@ -497,3 +499,4 @@ footer .navegacion a:hover {
     background-color: #ede2d8; /* Azul más oscuro en hover */
     transform: scale(1.1); /* Aumenta ligeramente el tamaño */
 }
+
