@@ -327,6 +327,23 @@ footer .navegacion a:hover {
     max-height: 50vh; /* Limita la altura del video al 80% de la altura de la ventana */
     object-fit: cover;
 }
+@media (max-width: 480px) {
+    footer .navegacion {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center; /* Centra las pestañas de navegación */
+    }
+
+    footer .navegacion a {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+
+    /* Ajusta el margen debajo del video para evitar solapamiento */
+    .footer-content {
+        margin-bottom: 0;
+    }
+}
 /* Estilo del botón flotante de WhatsApp */
 .whatsapp-float {
     position: fixed;

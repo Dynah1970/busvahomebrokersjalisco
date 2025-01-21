@@ -368,11 +368,17 @@ footer .navegacion a:hover {
     footer .navegacion {
         flex-direction: column;
         gap: 10px;
+        align-items: center; /* Centra las pestañas de navegación */
     }
 
     footer .navegacion a {
         font-size: 0.9rem;
         padding: 8px 10px;
+    }
+
+    /* Ajusta el margen debajo del video para evitar solapamiento */
+    .footer-content {
+        margin-bottom: 0;
     }
 }
 
