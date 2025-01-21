@@ -1,0 +1,492 @@
+
+/* Ajustes generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 18px; /* Tamaño uniforme para todo el texto */
+    background: linear-gradient(to bottom, #ede2d8 85%, #051d40 100%);
+    background-size: cover;
+    color: black;
+}
+
+* {
+    font-size: inherit; /* Fuerza que todos los elementos hereden el tamaño del body */
+}
+
+
+
+/* Contenedor del nav en la parte inferior derecha */
+.nav-container {
+    position: absolute;
+    bottom: 10px; /* Ubicación en la parte inferior */
+    right: 10px; /* Alineación a la derecha */
+    transform: translateY(20px); /* Baja el contenedor 20px más */
+    z-index: 10; /* Asegura que esté encima del contenido */
+    padding: 15px; /* Espaciado interno */
+    display: flex;
+    justify-content: center; /* Centra el contenido */
+}
+
+/* Estilo del nav */
+.nav-container .desktop-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Espaciado entre enlaces */
+}
+
+/* Estilo de los enlaces */
+.nav-container .desktop-nav a {
+    text-decoration: none; /* Sin subrayado */
+    color: #FFFFFF; /* Texto blanco */
+    font-size: 17px; /* Tamaño de letra */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 8px; /* Esquinas redondeadas */
+    background: transparent; /* Fondo transparente */
+    border: none; /* Sin bordes */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Transición suave */
+}
+
+/* Hover sobre los enlaces */
+.nav-container .desktop-nav a:hover {
+    background-color: rgba(255, 187, 54, 0.3); /* Fondo naranja translúcido al pasar el cursor */
+    color: #FFFFFF; /* Mantiene el texto blanco */
+}
+
+/* Header */
+header {
+    position: relative;
+    width: 100%;
+    height: 20vh;
+    overflow: hidden;
+}
+
+header video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.header-content {
+    position: relative;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 20vh;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+
+
+/* Navegación */
+.navegacion {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navegacion a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+   
+}
+
+.navegacion a:hover {
+    background-color: #FFBB36;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ede2d8 85%, #051d40 100%);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor-preguntas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.preguntas-frecuentes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.burbuja-pregunta {
+    display: inline-block;
+    max-width: 70%;
+    padding: 15px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    line-height: 1.5;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.burbuja-pregunta.azul {
+    background-color: #0056b3;
+    color: #ffffff;
+    align-self: flex-start;
+}
+
+.burbuja-pregunta.blanca {
+    background-color: #ffffff;
+    color: #0d203b;
+    align-self: flex-end;
+}
+
+.burbuja-pregunta:hover {
+    transform: scale(1.05);
+}
+
+.burbuja-pregunta:before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: inherit;
+    position: absolute;
+    top: 10px;
+    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+.burbuja-pregunta.azul:before {
+    left: -15px;
+}
+
+.burbuja-pregunta.blanca:before {
+    right: -15px;
+    transform: scaleX(-1);
+}
+
+.contactanos {
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    background-color: #ffd700;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.contactanos:hover {
+    background-color: #ffc107;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .burbuja-pregunta {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .contactanos {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .burbuja-pregunta {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* Menú Móvil */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(13, 32, 59, 0.95);
+    z-index: 1000;
+    transition: left 0.3s ease;
+}
+
+.mobile-menu.active {
+    left: 0;
+}
+
+.mobile-menu .close-icon {
+    font-size: 20px;
+    align-self: flex-end;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.mobile-nav a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    header .menu-icon {
+        display: block;
+    }
+
+    header .desktop-nav {
+        display: none;
+    }
+
+    .nav-container {
+        display: none;
+    }
+
+    .header-content {
+        align-items: center;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .navegacion {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navegacion a {
+        width: 80%;
+        text-align: center;
+    }
+}
+footer {
+    background-color: transparent;
+    text-align: center;
+    color: #FFFFFF;
+    position: relative;
+    
+   }
+
+footer .navegacion {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+footer .navegacion a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+   }
+
+footer .navegacion a:hover {
+    background-color: rgba(255, 187, 54, 0.3);
+    color: #FFFFFF;
+}
+
+/* Responsive Video */
+.footer-content {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    margin-bottom: -360px; /* Reduce el espacio bajo el video */
+    
+}
+
+.footer-content video {
+    width: 100%;
+    height: auto; /* Mantiene la proporción del video */
+    max-height: 50vh; /* Limita la altura del video al 80% de la altura de la ventana */
+    object-fit: cover;
+}
+
+/* Responsive Design */
+/* Responsive Design */
+@media (max-width: 480px) {
+    footer .navegacion {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center; /* Centra las pestañas de navegación */
+    }
+
+    footer .navegacion a {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+
+    /* Ajusta el margen debajo del video para evitar solapamiento */
+    .footer-content {
+        margin-bottom: 0;
+    }
+}
+
+/* Estilo del botón flotante de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px; /* Espaciado desde abajo */
+    right: 100px; /* Ajuste de posición para evitar superposición */
+    z-index: 1001; /* Asegurar que esté sobre otros elementos */
+    width: 60px; /* Tamaño del botón */
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50%; /* Forma circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: float-whatsapp 2s infinite;
+    cursor: pointer;
+}
+
+/* Ícono de WhatsApp */
+.whatsapp-float img {
+    width: 35px;
+    height: 35px;
+}
+
+/* Animación flotante específica de WhatsApp */
+@keyframes float-whatsapp {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Botón flotante del formulario */
+.formulario-float {
+    position: fixed;
+    bottom: 20px;
+    right: 90px; /* Ajuste para evitar superposición */
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    background-color: #007BFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    animation: float-formulario 2s infinite;
+    cursor: pointer;
+}
+
+/* Ícono del formulario */
+.formulario-float img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Animación flotante específica del formulario */
+@keyframes float-formulario {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Botón flotante para llamadas */
+.llamar-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* Ajuste de posición */
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    animation: float-llamar 2s infinite;
+    cursor: pointer;
+}
+
+/* Ícono de llamada */
+.llamar-float img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Animación flotante específica para llamada */
+@keyframes float-llamar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.navegacion-float {
+    position: fixed;
+    bottom: 20px; /* Ajusta según tu diseño */
+    padding: 10px;
+    background-color: #ede2d8; /* Fondo azul */
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 9999;
+}
+
+.navegacion-float img {
+    width: 24px;
+    height: 24px;
+}
+
+.atras-float {
+   left: 80px; /* Posición a la izquierda del botón principal */
+}
+
+.adelante-float {
+   left: 20px; /* Posición a la derecha */
+}
+
+.navegacion-float:hover {
+    background-color: #ede2d8; /* Azul más oscuro en hover */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+}
+

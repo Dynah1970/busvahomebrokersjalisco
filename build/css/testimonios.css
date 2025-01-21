@@ -1,0 +1,476 @@
+
+/* Ajustes generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 18px; /* Tamaño uniforme para todo el texto */
+    background: linear-gradient(to bottom, #ede2d8 85%, #051d40 100%);
+    background-size: cover;
+    color: #FFFFFF;
+}
+
+* {
+    font-size: inherit; /* Fuerza que todos los elementos hereden el tamaño del body */
+}
+
+
+
+/* Contenedor del nav en la parte inferior derecha */
+.nav-container {
+    position: absolute;
+    bottom: 10px; /* Ubicación en la parte inferior */
+    right: 10px; /* Alineación a la derecha */
+    transform: translateY(20px); /* Baja el contenedor 20px más */
+    z-index: 10; /* Asegura que esté encima del contenido */
+    padding: 15px; /* Espaciado interno */
+    display: flex;
+    justify-content: center; /* Centra el contenido */
+}
+
+/* Estilo del nav */
+.nav-container .desktop-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Espaciado entre enlaces */
+}
+
+/* Estilo de los enlaces */
+.nav-container .desktop-nav a {
+    text-decoration: none; /* Sin subrayado */
+    color: #FFFFFF; /* Texto blanco */
+    font-size: 17px; /* Tamaño de letra */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 8px; /* Esquinas redondeadas */
+    background: transparent; /* Fondo transparente */
+    border: none; /* Sin bordes */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Transición suave */
+}
+
+/* Hover sobre los enlaces */
+.nav-container .desktop-nav a:hover {
+    background-color: rgba(255, 187, 54, 0.3); /* Fondo naranja translúcido al pasar el cursor */
+    color: #FFFFFF; /* Mantiene el texto blanco */
+}
+
+/* Header */
+header {
+    position: relative;
+    width: 100%;
+    height: 20vh;
+    overflow: hidden;
+}
+
+header video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.header-content {
+    position: relative;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 20vh;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+
+
+/* Navegación */
+.navegacion {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navegacion a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navegacion a:hover {
+    background-color: #FFBB36;
+}
+
+
+/* Ajustes generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    background: linear-gradient(to bottom, #ede2d8 85%, #051d40 100%);
+    background-size: cover;
+    color: #FFFFFF;
+}
+
+/* Contenedor general */
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Título de la sección */
+h1 {
+    color: #FFD700;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+/* Contenedor de testimonios */
+.testimoniales {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+    gap: 30px 40px; /* Espaciado entre filas y columnas */
+    align-items: start; /* Alinea los elementos al inicio */
+    justify-content: center; /* Centra la cuadrícula */
+    margin-bottom: 60px; /* Más margen inferior */
+}
+
+/* Estilo individual de cada testimonial */
+.testimonial {
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px; /* Reduce el padding interno */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-height: 150px; /* Reduce la altura mínima */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 220px; /* Ajusta el ancho */
+    margin: 0 auto; /* Centra el cuadro */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Contenedor de la imagen circular */
+.imagen {
+    width: 80px; /* Ajusta el tamaño deseado del contenedor */
+    height: 80px; /* Ajusta el tamaño deseado del contenedor */
+    margin: 0 auto 10px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid white;
+    position: relative;
+    transition: transform 0.3s ease-in-out; /* Movimiento suave */
+}
+
+/* Imagen dentro del contenedor */
+.imagen img {
+    width: 100%; /* Asegúrate de que la imagen ocupe todo el ancho del contenedor */
+    height: 100%; /* Asegúrate de que la imagen ocupe todo el alto del contenedor */
+    object-fit: cover; /* Recorta proporcionalmente para llenar el círculo */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Movimiento al pasar el cursor */
+.imagen:hover img {
+    transform: scale(1.2); /* Agranda ligeramente la imagen */
+}
+
+/* Centrar el nombre del que da el testimonio */
+.nombre {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #051d40;
+    margin-bottom: 10px;
+}
+
+/* Estilo para el testimonial final */
+.testimonial-final {
+    grid-column: 1 / -1; /* Ocupa todo el ancho */
+    justify-self: center; /* Centra el elemento */
+    margin-top: 40px; /* Espaciado superior adicional */
+    width: 70%; /* Ajusta el ancho */
+}
+
+/* Estilo adicional para bloques de citas */
+blockquote {
+    font-style: italic;
+    margin: 20px 0;
+    flex-grow: 1; /* Permite que el contenido del bloque ocupe el espacio necesario */
+    color: black;
+}
+
+/* Hover en testimonios */
+.testimonial:hover {
+    transform: translateY(-10px) scale(1.05); /* Eleva y agranda ligeramente */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Incrementa la sombra */
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .testimoniales {
+        grid-template-columns: 1fr; /* Una columna */
+    }
+    .testimonial-final {
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+}
+
+/* Menú Móvil */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(13, 32, 59, 0.95);
+    z-index: 1000;
+    transition: left 0.3s ease;
+}
+
+.mobile-menu.active {
+    left: 0;
+}
+
+.mobile-menu .close-icon {
+    font-size: 20px;
+    align-self: flex-end;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.mobile-nav a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    header .menu-icon {
+        display: block;
+    }
+
+    header .desktop-nav {
+        display: none;
+    }
+
+    .nav-container {
+        display: none;
+    }
+
+    .header-content {
+        align-items: center;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .navegacion {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navegacion a {
+        width: 80%;
+        text-align: center;
+    }
+}
+footer {
+    background-color: transparent;
+    text-align: center;
+    color: #FFFFFF;
+    position: relative;
+}
+
+footer .navegacion {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+footer .navegacion a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+footer .navegacion a:hover {
+    background-color: rgba(255, 187, 54, 0.3);
+    color: #FFFFFF;
+}
+
+/* Responsive Video */
+.footer-content {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    margin-bottom: -360px; /* Reduce el espacio bajo el video */
+}
+
+.footer-content video {
+    width: 100%;
+    height: auto; /* Mantiene la proporción del video */
+    max-height: 50vh; /* Limita la altura del video al 80% de la altura de la ventana */
+    object-fit: cover;
+}
+@media (max-width: 480px) {
+    footer .navegacion {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center; /* Centra las pestañas de navegación */
+    }
+
+    footer .navegacion a {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+
+    /* Ajusta el margen debajo del video para evitar solapamiento */
+    .footer-content {
+        margin-bottom: 0;
+    }
+}
+/* Estilo del botón flotante de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px; /* Espaciado desde abajo */
+    right: 160px; /* Ajuste de posición para evitar superposición */
+    z-index: 1001; /* Asegurar que esté sobre otros elementos */
+    width: 60px; /* Tamaño del botón */
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50%; /* Forma circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: float-whatsapp 2s infinite;
+    cursor: pointer;
+}
+
+/* Ícono de WhatsApp */
+.whatsapp-float img {
+    width: 35px;
+    height: 35px;
+}
+
+/* Animación flotante específica de WhatsApp */
+@keyframes float-whatsapp {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Botón flotante del formulario */
+.formulario-float {
+    position: fixed;
+    bottom: 20px;
+    right: 90px; /* Ajuste para evitar superposición */
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    background-color: #007BFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    animation: float-formulario 2s infinite;
+    cursor: pointer;
+}
+
+/* Ícono del formulario */
+.formulario-float img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Animación flotante específica del formulario */
+@keyframes float-formulario {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Botón flotante para llamadas */
+.llamar-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* Ajuste de posición */
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    animation: float-llamar 2s infinite;
+    cursor: pointer;
+}
+
+/* Ícono de llamada */
+.llamar-float img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Animación flotante específica para llamada */
+@keyframes float-llamar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.navegacion-float {
+    position: fixed;
+    bottom: 20px; /* Ajusta según tu diseño */
+    padding: 10px;
+    background-color: #007bff; /* Fondo azul */
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.navegacion-float img {
+    width: 24px;
+    height: 24px;
+}
+
+.atras-float {
+   left: 80px; /* Posición a la izquierda del botón principal */
+}
+
+.adelante-float {
+   left: 20px; /* Posición a la derecha */
+}
+
+.navegacion-float:hover {
+    background-color: #0056b3; /* Azul más oscuro en hover */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+}
